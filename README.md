@@ -148,6 +148,29 @@ Everything lives in `.env` (see `.env.example`).
 | `RATE_LIMIT_PER_MIN` | `0` | per-user messages/minute (0 = off, owner exempt) |
 | `ALLOW_USER_SHELL` | `true` | non-owner private shell in an isolated offline container |
 
+## 💡 Why AgentV
+
+- **Ownership** — your bot token, your model gateway, your server, your data.
+  No subscription, no lock-in.
+- **Real execution** — hardened Docker sandbox runs code with timeouts, quotas
+  and per-user isolation, not just chat.
+- **Isolation by design** — per-chat workspaces, per-user group sub-workspaces,
+  per-user offline shell containers, no root, no cross-user reads.
+- **Bot + userbot** — one runtime, shared tools and memory.
+- **Bring your own models** — any OpenAI-compatible gateway, per-chat routing,
+  encrypted keys.
+- **Extensible at runtime** — plugins, MCP servers and skills the model can
+  write or install itself, hot-reloaded without a restart.
+- **Telegram-native UX** — rich messages, native drafts, collapsed thinking,
+  timers, flood-wait retries, self-destructing tool logs.
+- **Groups done properly** — history, search, summaries, team brain, moderation,
+  reactions.
+- **Open source (MIT)** — audit it, fork it, self-host it, build on it.
+- **Cheap** — a VPS plus your own gateway; Mira-class capabilities without a
+  SaaS bill.
+
+Read the full breakdown: [`docs/WHY_AGENTV.md`](docs/WHY_AGENTV.md).
+
 ## 💬 Commands
 
 Users:
@@ -181,6 +204,16 @@ runtime skill management.
 
 Full reference: [`docs/TOOLS.md`](docs/TOOLS.md) · why AgentV:
 [`docs/WHY_AGENTV.md`](docs/WHY_AGENTV.md).
+
+| Category | Tools |
+|---|---|
+| Code & OS | `run_shell`, `run_python`, `process_manage`, `search_files`, `edit_file`, file ops |
+| Web | `web_search`, `web_fetch`, `browser`, `browser_read`, `pdf_extract` |
+| Media | `send_sticker`, `send_gif`, `make_sticker`, `text_to_speech`, `react` |
+| Memory | `remember`, `memory_list`, `forget`, `session_search`, `todo_list`, `team_brain` |
+| Groups | `chat_history`, `search_chat`, `user_history`, moderation, pin/unpin, `/summarize` |
+| Automation | reminders, `schedule_task`, `delegate_task`, `set_reasoning`, `set_stream` |
+| Extensibility | `create_skill`, `install_skill`, plugins, MCP tools |
 
 ## 🔌 MCP
 
