@@ -179,7 +179,8 @@ todos, recurring schedules, group history/search/team brain, pin/unpin,
 moderation, reactions, memory (chat/global/user), delegation, settings and
 runtime skill management.
 
-Full reference: [`docs/TOOLS.md`](docs/TOOLS.md).
+Full reference: [`docs/TOOLS.md`](docs/TOOLS.md) · why AgentV:
+[`docs/WHY_AGENTV.md`](docs/WHY_AGENTV.md).
 
 ## 🔌 MCP
 
