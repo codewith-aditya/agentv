@@ -1,0 +1,43 @@
+name: agentv
+
+services:
+  agentv:
+    build: .
+    image: agentv:latest
+    container_name: agentv
+    restart: unless-stopped
+    mem_limit: 1g
+    cpus: 1.0
+    env_file:
+      - .env
+    environment:
+      DATABASE_PATH: /app/data/agentv.db
+      DATA_DIR: /app/data
+      WORKSPACE_DIR: /workspace
+      PLUGINS_DIR: /app/plugins
+    volumes:
+      - ./data:/app/data
+      - ./plugins:/app/plugins
+      - /var/run/docker.sock:/var/run/docker.sock
+      - agentv-workspace:/workspace
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request;urllib.request.urlopen('http://127.0.0.1:8080/healthz',timeout=3)"
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 180s
+    logging:
+      driver: json-file
+      options:
+        max-size: "20m"
+        max-file: "3"
+
+volumes:
+  agentv-workspace:
+    name: agentv-workspace

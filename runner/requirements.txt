@@ -1,0 +1,9 @@
+requests
+httpx
+beautifulsoup4
+lxml
+pyyaml
+numpy
+pandas
+rich
+mcp
