@@ -45,7 +45,7 @@ class Settings(BaseSettings):
     secret_key: str = ""
 
     # llm
-    llm_base_url: str = "https://api.modelrouter.in/v1"
+    llm_base_url: str = "https://api.openai.com/v1"
     llm_api_key: str = ""
     llm_model: str = "minimax-m3"
     llm_vision_model: str = ""
