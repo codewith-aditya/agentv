@@ -136,7 +136,7 @@ Everything lives in `.env` (see `.env.example`).
 | `OWNER_IDS` | — | comma-separated numeric Telegram ids with full authority |
 | `BOT_TOKEN` | — | BotFather token |
 | `USERBOT_ENABLED` | `false` | Telethon as your account (`TG_API_ID`, `TG_API_HASH`, `USERBOT_SESSION`) |
-| `LLM_BASE_URL` / `LLM_API_KEY` / `LLM_MODEL` | modelrouter / minimax-m3 | default provider |
+| `LLM_BASE_URL` / `LLM_API_KEY` / `LLM_MODEL` | your gateway / your-model | default provider |
 | `SANDBOX_MEMORY` / `SANDBOX_STORAGE` | `3g` / `4g` | runner limits |
 | `TOOL_TIMEOUT_SECONDS` | `25` | hard per-tool cap |
 | `THINKING_TIMEOUT_SECONDS` | `60` | max pure-thinking before a forced answer |
